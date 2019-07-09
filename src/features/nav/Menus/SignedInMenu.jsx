@@ -6,7 +6,7 @@ const SignedInMenu = ({ signOut, profile }) => {
     return (
         <Menu.Item position='right'>
             <Image avatar spaced='right' src={profile.photoURL || '/assets/user.png'} />
-            <Dropdown pointing='top left' text={`Hi ${profile.displayName}`}>
+            <Dropdown pointing='top left' text={profile.isLoaded ? `Hi ${profile.displayName}` : ''}>
                 <Dropdown.Menu>
                     <Dropdown.Item text='Create Event' icon='plus' />
                     <Dropdown.Item text='My Events' icon='calendar' />
