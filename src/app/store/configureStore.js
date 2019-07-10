@@ -10,7 +10,7 @@ const rrfConfig = {
     userProfile: 'users',
     attachedAuthIsReady: true,
     useFirestoreForProfile: true,
-    updateProfileOnLogin: false
+    updateProfileOnLogin: false,
 }
 
 export const configureStore = () => {
