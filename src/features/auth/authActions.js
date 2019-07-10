@@ -53,10 +53,11 @@ export const socialLogin = (selectedProvider) =>
         const firebase = getFirebase();
         try {
             dispatch(closeModal())
-            await firebase.login({
+            const user = await firebase.login({
                 provider: selectedProvider,
                 type: 'popup'
             })
+            console.log(user)
         } catch (error) {
             console.log(error)
         }
